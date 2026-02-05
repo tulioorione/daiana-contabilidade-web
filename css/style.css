@@ -173,3 +173,53 @@ footer {
     color: #555;
     line-height: 1.4;
 }
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: 0.3s;
+}
+
+/* Media Query para Celulares e Tablets */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; 
+    }
+
+    .nav-links {
+        position: absolute;
+        right: -100%; 
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        right: 0; 
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    #home h1 {
+        font-size: 1.8rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; 
+    }
+}
