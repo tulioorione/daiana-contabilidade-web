@@ -78,8 +78,55 @@ nav ul li a {
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .cta-button:hover {
     transform: scale(1.05);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-info h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.contact-details li {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
 }
